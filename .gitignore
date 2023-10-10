@@ -1,4 +1,12 @@
+# for visual studio
 x64/
 *.vcxproj
 *.vcxproj.filters
 *.vcxproj.user
+
+# for vscode
+.vscode
+*.exe
+*.ilk
+*.obj
+*.pdb

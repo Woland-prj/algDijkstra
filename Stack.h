@@ -3,7 +3,7 @@ using DataType = char;
 
 class CStack {
 private:
-	typedef struct St {
+	struct St {
 		DataType Data;
 		St* Next;
 	};
