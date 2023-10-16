@@ -25,9 +25,14 @@ public:
 		return Top == nullptr;
 	}
 
+	DataType Pull() {
+		if (!this->isEmpty()) 
+			return Top->Data;
+	}
+
 	DataType Pop() {
 		DataType D;
-		if (Top != nullptr) {
+		if (!this->isEmpty()) {
 			D = Top->Data;
 			El = Top;
 			Top = El->Next;
