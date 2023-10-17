@@ -1,7 +1,9 @@
 ﻿#include <iostream>
 #include "StrToPostfix.h"
 
-int main(int argc, char* argv[])
+int main(
+    
+)
 {
     CStrToPostfix sp;
     std::cout << "Hello World!\n";
