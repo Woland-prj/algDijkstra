@@ -1,15 +1,23 @@
 ﻿#include <iostream>
+#include <fstream>
 #include "StrToPostfix.h"
 
-int main(
-    
-)
+int main()
 {
-    std::setlocale(LC_ALL, "ru");
     CStrToPostfix sp;
-    if (argc != 2) {
-        std::cout << "There is no expression as the first argument" << std::endl;
+    std::string line;
+    std::ifstream inputFile("in.txt");
+    if (inputFile.is_open())
+    {
+        while (std::getline(inputFile, line))
+        {
+            std::cout << "Infix form: " << line << std::endl;
+            std::cout << "Postfix form: " << sp.strToPostfix(line) << std::endl << std::endl;
+        }
+    }
+    else {
+        std::cout << "Can not open file in.txt" << std::endl;
         exit(1);
     }
-    std::cout << sp.strToPostfix(argv[1]) << std::endl;
+    inputFile.close();
 }
